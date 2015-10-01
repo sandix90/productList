@@ -8,32 +8,51 @@ import android.database.sqlite.SQLiteOpenHelper;
  * Created by alex on 9/30/15.
  */
 public class DbHelper extends SQLiteOpenHelper {
+
     public DbHelper(Context context){
-        super(context, "sandix_db.db", null, 1);
+        super(context, "sandix.db", null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         String productsQuery = "CREATE TABLE products (" +
-                "id integer primary key autoincrement, " +
-                "name nvarchar(50)," +
-                "price real," +
+                "id integer primary key autoincrement," +
                 "category integer," +
+                "name nvarchar(50)," +
+                "imageIndex integer,"+
+                "description text," +
+                "timestamp datetime)";
+        db.execSQL(productsQuery);
+
+        String checkListQuery = "CREATE TABLE checkList (" +
+                "id integer primary key autoincrement," +
+                "name nvarchar(100)" +
+                "datetime datetime)";
+        db.execSQL(checkListQuery);
+
+        String  checkProductsQuery = "CREATE TABLE checkProduct (" +
+                "id integer primary key autoincrement," +
+                "checkList_id integer," +
+                "product_id integer," +
+                "status integer," +
+                "price real," +
                 "count real," +
                 "weight real," +
-                "imageIndex integer,"+
                 "description text)";
-        db.execSQL(productsQuery);
+        db.execSQL(checkProductsQuery);
 
         String categoryQuery = "CREATE TABLE category (" +
                 "id integer primary key autoincrement, " +
-                "name nvarchar(50))";
+                "name nvarchar(50)," +
+                "description text," +
+                "timestamp datetime)";
         db.execSQL(categoryQuery);
 
-        String productsListQuery = "CREATE TABLE productList (" +
+        String imagesQuery = "CREATE TABLE images (" +
                 "id integer primary key autoincrement," +
-                "";
-
+                "path nvarchar(400)," +
+                "timestamp datetime)";
+        db.execSQL(imagesQuery);
     }
 
     @Override
