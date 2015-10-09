@@ -10,12 +10,16 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:theme="@style/AppTheme.MyStyle" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ProductsListActivity"
+            android:label="@string/title_activity_products_list" >
         </activity>
     </application>
 

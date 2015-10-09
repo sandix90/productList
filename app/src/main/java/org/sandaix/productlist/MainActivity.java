@@ -1,6 +1,7 @@
 package org.sandaix.productlist;
 
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,12 +15,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         add_check = (ImageView) findViewById(R.id.add_check);
         add_check.setOnClickListener(this);
         checkInfLayout = (LinearLayout) findViewById(R.id.check_root_layout);
         mainLayout = (LinearLayout) findViewById(R.id.main_layout);
+        setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 

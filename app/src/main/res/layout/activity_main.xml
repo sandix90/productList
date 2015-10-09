@@ -1,32 +1,75 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:id="@+id/main_layout"
+
     tools:context=".MainActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:layout_height="wrap_content"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:background="#2196F3"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
-        <SearchView
-            android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2196F3"
+            app:theme="@style/AppTheme.MyStyle"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+
+            >
+
+            <SearchView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:queryHint="Поиск списка" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+
+        android:id="@+id/add_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_action_new"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:backgroundTint="#10619F" />
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ListView
+            android:layout_width="240dp"
             android:layout_height="match_parent"
+            android:layout_gravity="start">
 
-            android:queryHint="Поиск списка"/>
-
-        <ImageView
-            android:id="@+id/add_check"
-            android:layout_gravity="right"
-            android:layout_marginEnd="10dp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_action_new"/>
-    </android.support.v7.widget.Toolbar>
+        </ListView>
+    </android.support.v4.widget.DrawerLayout>
 
 
-
-</LinearLayout>
+</RelativeLayout>

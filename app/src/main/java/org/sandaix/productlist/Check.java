@@ -6,13 +6,13 @@ import java.util.List;
 /**
  * Created by alex on 10/1/15.
  */
-public class ProductList {
+public class Check {
     private String name;
     private List<Product> productList;
     private String creationDateTime;
 
 
-    public ProductList(String _name){
+    public Check(String _name){
         this.name = _name;
         productList = new ArrayList<Product>();
     }

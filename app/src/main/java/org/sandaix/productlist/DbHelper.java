@@ -27,6 +27,8 @@ public class DbHelper extends SQLiteOpenHelper {
         String checkListQuery = "CREATE TABLE checkList (" +
                 "id integer primary key autoincrement," +
                 "name nvarchar(100)" +
+                "items_count integer" +
+                "items_bought integer "+
                 "datetime datetime)";
         db.execSQL(checkListQuery);
 

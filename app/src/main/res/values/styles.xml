@@ -1,8 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:colorPrimary">#4540e1</item>
+        <item name="android:colorAccent">#5fdf38</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="AppTheme.MyStyle">
+
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="actionBarSize">56dp</item>
+    </style>
+
+    <style name="CustomProgressBar" parent="Base.Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/custom_progressbar</item>
+        <item name="android:progressBarStyleHorizontal">?android:attr/progressBarStyleHorizontal</item>
+        <item name="android:minHeight">3dp</item>
+        <item name="android:maxHeight">10dp</item>
     </style>
 
 </resources>
