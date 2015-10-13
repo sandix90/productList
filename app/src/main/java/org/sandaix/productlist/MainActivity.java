@@ -1,17 +1,23 @@
 package org.sandaix.productlist;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     ImageView add_check;
     LinearLayout checkInfLayout,mainLayout;
+    LayoutInflater inflater;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +29,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         checkInfLayout = (LinearLayout) findViewById(R.id.check_root_layout);
         mainLayout = (LinearLayout) findViewById(R.id.main_layout);
         setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        inflater = getLayoutInflater();
+        context = this;
     }
 
 
@@ -54,9 +62,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.add_check:
-                View inflateView = getLayoutInflater().inflate(R.layout.checkitem,checkInfLayout,false);
-                mainLayout.addView(inflateView);
+                Intent intent = new Intent(getApplicationContext(), ProductsListActivity.class);
+                startActivity(intent);
+//                View inflateView = inflater.inflate(R.layout.checkitem, mainLayout, false);
+//                mainLayout.addView(inflateView);
+//                inflateView.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Intent intent = new Intent(getApplicationContext(), ProductsListActivity.class);
+//                        startActivity(intent);
+//                    }
+//                });
                 break;
+
         }
     }
 }

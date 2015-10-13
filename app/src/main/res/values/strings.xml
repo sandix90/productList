@@ -6,4 +6,10 @@
     <string name="items">Items:</string>
     <string name="remains">Remains:</string>
     <string name="title_activity_products_list">productsList</string>
+    <string-array name="test_array">
+        <item>Элемент 1</item>
+        <item>Элемент 2</item>
+        <item>Элемент 3</item>
+        <item>Элемент 4</item>
+    </string-array>
 </resources>

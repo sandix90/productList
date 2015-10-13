@@ -26,7 +26,7 @@
     <ProgressBar
         style="@style/CustomProgressBar"
         android:layout_width="match_parent"
-        android:layout_height="5dp"
+        android:layout_height="2dp"
 
         android:layout_marginRight="10dp"
         android:progress="60" />
