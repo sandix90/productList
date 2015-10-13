@@ -35,6 +35,7 @@ public class ProductsListActivity extends AppCompatActivity implements View.OnCl
         switch (v.getId()) {
             case R.id.add_product:
                 ProductDialog dialog = new ProductDialog();
+                dialog.setTargetFragment(dialog,0);
                 //dialog.setTargetFragment(this,0);
                 dialog.show(getSupportFragmentManager(), "ProductDialog");
 

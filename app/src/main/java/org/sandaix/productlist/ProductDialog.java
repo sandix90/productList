@@ -40,7 +40,8 @@ public class ProductDialog extends DialogFragment implements  View.OnClickListen
         products.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    callback.onPositiveResult(products.getSelectedItem().toString());
+                    //callback.onPositiveResult(products.getSelectedItem().toString());
+                callback.onPositiveResult(products.getItemAtPosition(position).toString());
                     dismiss();
             }
         });
@@ -66,7 +67,7 @@ public class ProductDialog extends DialogFragment implements  View.OnClickListen
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //getActivity();
-        callback = (OnDialogResultListener)getTargetFragment();
+        callback = (OnDialogResultListener)getActivity();
     }
 }
 
