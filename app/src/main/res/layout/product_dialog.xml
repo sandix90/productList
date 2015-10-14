@@ -3,13 +3,16 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:minWidth="100dp"
+
     >
-    <android.support.v7.widget.SearchView
+    <android.widget.SearchView
+
         android:id="@+id/search"
+
+        style="@style/SearchView"
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
-    </android.support.v7.widget.SearchView>
+    </android.widget.SearchView>
 
     <ListView
         android:id="@+id/products"
@@ -19,15 +22,16 @@
     <android.support.design.widget.TextInputLayout
         android:layout_marginLeft="10dp"
         android:layout_height="wrap_content"
-        android:layout_width="220dp"
+        android:layout_width="match_parent"
         >
         <EditText
             android:textColor="#000000"
             android:textColorHint="#000000"
-            android:hint="Укажите цену"
-            android:layout_width="match_parent"
+            android:hint="Цена"
+            android:layout_width="70dp"
             android:inputType="numberDecimal"
             android:layout_height="wrap_content"/>
+
 
     </android.support.design.widget.TextInputLayout>
 
