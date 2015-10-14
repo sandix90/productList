@@ -3,6 +3,7 @@ package org.sandaix.productlist;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
+import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +32,6 @@ public class ProductDialog extends DialogFragment implements  View.OnClickListen
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.product_dialog, null);
-
         ok = (Button) v.findViewById(R.id.ok);
         cancel = (Button) v.findViewById(R.id.cancel);
         ok.setOnClickListener(this);
@@ -41,7 +41,7 @@ public class ProductDialog extends DialogFragment implements  View.OnClickListen
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     //callback.onPositiveResult(products.getSelectedItem().toString());
-                callback.onPositiveResult(products.getItemAtPosition(position).toString());
+                    callback.onPositiveResult(products.getItemAtPosition(position).toString());
                     dismiss();
             }
         });
@@ -58,14 +58,14 @@ public class ProductDialog extends DialogFragment implements  View.OnClickListen
             case R.id.cancel:
 
                 break;
-
         }
-
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //setStyle(STYLE_NORMAL, android.R.style.Theme_DeviceDefault_Light_Dialog_NoActionBar);
+        //setStyle(STYLE_NORMAL, R.style.AppTheme_CustomDialog);
         //getActivity();
         callback = (OnDialogResultListener)getActivity();
     }

@@ -21,6 +21,7 @@
             android:name=".ProductsListActivity"
             android:label="@string/title_activity_products_list" >
         </activity>
+
     </application>
 
 </manifest>

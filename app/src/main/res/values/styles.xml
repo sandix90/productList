@@ -6,6 +6,8 @@
         <item name="android:colorPrimary">#4540e1</item>
         <item name="android:colorAccent">#5fdf38</item>
         <item name="android:textColor">@color/black</item>
+        <item name="android:alertDialogStyle">@style/AppTheme.CustomDialog</item>
+        <item name="android:dialogTheme">@style/AppTheme.CustomDialog</item>
     </style>
     <style name="AppTheme.MyStyle">
 
@@ -20,6 +22,14 @@
         <item name="android:progressBarStyleHorizontal">?android:attr/progressBarStyleHorizontal</item>
         <item name="android:minHeight">3dp</item>
         <item name="android:maxHeight">10dp</item>
+    </style>
+
+    <style name="AppTheme.CustomDialog" parent="Theme.AppCompat.Dialog.MinWidth">
+        <item name="android:textColorHint">#b1aeae</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:colorButtonNormal">#47a729</item>
+
     </style>
 
 </resources>
