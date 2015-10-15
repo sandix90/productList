@@ -36,7 +36,7 @@
 
     </style>
     <style name="SearchView" parent="Widget.AppCompat.SearchView">
-        <item name="android:searchIcon">@drawable/ic_search_black_24dp</item>
+        <item name="searchIcon">@drawable/ic_search_black_24dp</item>
 
 
 

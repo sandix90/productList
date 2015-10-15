@@ -5,14 +5,12 @@
     android:layout_height="match_parent"
 
     >
-    <android.widget.SearchView
+    <android.support.v7.widget.SearchView
 
         android:id="@+id/search"
-
-        style="@style/SearchView"
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
-    </android.widget.SearchView>
+    </android.support.v7.widget.SearchView>
 
     <ListView
         android:id="@+id/products"

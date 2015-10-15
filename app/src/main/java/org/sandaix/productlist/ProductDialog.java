@@ -58,10 +58,8 @@ public class ProductDialog extends DialogFragment implements  View.OnClickListen
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.ok:
-
                 break;
             case R.id.cancel:
-
                 break;
         }
     }
@@ -72,6 +70,7 @@ public class ProductDialog extends DialogFragment implements  View.OnClickListen
         //setStyle(STYLE_NORMAL, android.R.style.Theme_DeviceDefault_Light_Dialog_NoActionBar);
         //setStyle(STYLE_NORMAL, R.style.AppTheme_CustomDialog);
         //getActivity();
+
         callback = (OnDialogResultListener)getActivity();
 
 
