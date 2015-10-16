@@ -2,4 +2,5 @@
 <resources>
     <color name="black">#000000</color>
     <color name="windowBackground">#1ef2de</color>
+    <color name = "search_view_window_background">#878383</color>
 </resources>

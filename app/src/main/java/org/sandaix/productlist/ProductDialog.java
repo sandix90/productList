@@ -33,10 +33,10 @@ public class ProductDialog extends DialogFragment implements  View.OnClickListen
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.product_dialog, null);
-        int width = getActivity().getResources().getDisplayMetrics().widthPixels;
-        int height = getActivity().getResources().getDisplayMetrics().heightPixels;
-
-        getDialog().getWindow().setAttributes(new WindowManager.LayoutParams(width,height));
+//        int width = getActivity().getResources().getDisplayMetrics().widthPixels;
+//        int height = getActivity().getResources().getDisplayMetrics().heightPixels;
+//
+//        getDialog().getWindow().setAttributes(new WindowManager.LayoutParams(width,height));
         ok = (Button) v.findViewById(R.id.ok);
         cancel = (Button) v.findViewById(R.id.cancel);
         ok.setOnClickListener(this);

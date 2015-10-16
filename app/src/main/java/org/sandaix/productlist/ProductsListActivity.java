@@ -27,7 +27,7 @@ public class ProductsListActivity extends AppCompatActivity implements View.OnCl
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setTitle("Имя чека");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
     }
 
     @Override
@@ -35,7 +35,7 @@ public class ProductsListActivity extends AppCompatActivity implements View.OnCl
         switch (v.getId()) {
             case R.id.add_product:
                 ProductDialog dialog = new ProductDialog();
-                dialog.setTargetFragment(dialog,0);
+                //dialog.setTargetFragment(dialog,0);
                 //dialog.setTargetFragment(this,0);
                 dialog.show(getSupportFragmentManager(), "ProductDialog");
 
