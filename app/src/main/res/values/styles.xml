@@ -7,6 +7,7 @@
         <item name="android:colorAccent">#5fdf38</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:alertDialogStyle">@style/AppTheme.CustomDialog</item>
+
         <item name="android:dialogTheme">@style/AppTheme.CustomDialog</item>
         <item name="android:statusBarColor">#304DB7</item>
     </style>
@@ -31,6 +32,9 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:windowMinWidthMinor">@dimen/window_min_width_minor</item>
         <item name="android:windowMinWidthMajor">@dimen/window_min_width_minor</item>
+
+        <item name="toolbarStyle">@style/AppTheme.ToolbarStyle</item>
+
     </style>
 
     <style name="SearchView" parent="Widget.AppCompat.SearchView">
@@ -38,6 +42,15 @@
         <item name="submitBackground">@color/search_view_window_background</item>
         <item name="queryBackground">@color/search_view_window_background</item>
         <item name="android:background">@color/search_view_window_background</item>
+    </style>
+    <style name="AppTheme.ToolbarStyle">
+        <item name="android:background">#7887ed</item>
+        <item name="android:textViewStyle">@style/AppTheme.TextViewStyle</item>
+
+    </style>
+
+    <style name="AppTheme.TextViewStyle">
+        <item name="android:textColor">#639848</item>
     </style>
 
 

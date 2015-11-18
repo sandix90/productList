@@ -26,20 +26,19 @@ public class DbHelper extends SQLiteOpenHelper {
 
         String checkListQuery = "CREATE TABLE checkList (" +
                 "id integer primary key autoincrement," +
-                "name nvarchar(100)" +
-                "items_count integer" +
-                "items_bought integer "+
+                "name nvarchar(100)," +
+                "items_count integer," +
+                "items_bought integer, "+
                 "datetime datetime)";
         db.execSQL(checkListQuery);
 
         String  checkProductsQuery = "CREATE TABLE checkProduct (" +
                 "id integer primary key autoincrement," +
-                "checkList_id integer," +
-                "product_id integer," +
+                "checkList_id integer REFERENCES checkList(id) ," +
+                "product_id integer REFERENCES products(id)," +
                 "status integer," +
                 "price real," +
                 "count real," +
-                "weight real," +
                 "description text)";
         db.execSQL(checkProductsQuery);
 
@@ -55,6 +54,8 @@ public class DbHelper extends SQLiteOpenHelper {
                 "path nvarchar(400)," +
                 "timestamp datetime)";
         db.execSQL(imagesQuery);
+
+
     }
 
     @Override

@@ -15,5 +15,6 @@
         <item>Элемент 6</item>
         <item>Элемент 7</item>
     </string-array>
+    <string name="title_activity_add_new_product">New Product</string>
 </resources>
 

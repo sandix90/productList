@@ -1,5 +1,6 @@
 package org.sandaix.productlist;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.support.design.widget.FloatingActionButton;
@@ -62,6 +63,10 @@ public class ProductsListActivity extends AppCompatActivity implements View.OnCl
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }
+        if(id == R.id.add_new_product){
+            Intent intent = new Intent(this, addNewProduct.class);
+            startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }
