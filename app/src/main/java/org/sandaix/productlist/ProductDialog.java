@@ -30,7 +30,7 @@ public class ProductDialog extends DialogFragment implements  View.OnClickListen
     private OnDialogResultListener callback;
 
     public interface OnDialogResultListener{
-        public void onPositiveResult(String value);
+        public void onPositiveResult(String nameProduct, float price, float quantity, String description );
         public void onNegativeResult();
 
     }
@@ -40,7 +40,7 @@ public class ProductDialog extends DialogFragment implements  View.OnClickListen
     DbHelper dbHelper;
     SQLiteDatabase db;
     Spinner unitOfMeasure;
-    EditText edittext;
+    EditText productName, productPrice, productQuantity, productDescription;
 
 
     @Nullable
@@ -51,12 +51,17 @@ public class ProductDialog extends DialogFragment implements  View.OnClickListen
 //        int height = getActivity().getResources().getDisplayMetrics().heightPixels;
 //
 //        getDialog().getWindow().setAttributes(new WindowManager.LayoutParams(width,height));
+
         ok = (Button) v.findViewById(R.id.ok);
         cancel = (Button) v.findViewById(R.id.cancel);
         ok.setOnClickListener(this);
         cancel.setOnClickListener(this);
         unitOfMeasure = (Spinner) v.findViewById(R.id.unit_of_measure);
-        edittext = (EditText) v.findViewById(R.id.product_name);
+        productName = (EditText) v.findViewById(R.id.product_name);
+        productPrice = (EditText) v.findViewById(R.id.product_price);
+        productQuantity = (EditText) v.findViewById(R.id.product_quantity);
+        productDescription = (EditText) v.findViewById(R.id.description);
+
         String items[] = new String[5];
         items[0] = "units";
         items[1] = "kg.";
@@ -100,11 +105,16 @@ public class ProductDialog extends DialogFragment implements  View.OnClickListen
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.ok:
-
-                    callback.onPositiveResult(edittext.getText().toString());
-                    this.dismiss();
+                    if(productName.getText().toString().equals("")) {
+                        callback.onPositiveResult(productName.getText().toString(),
+                                Float.parseFloat(productPrice.getText().toString()),
+                                Float.parseFloat(productQuantity.getText().toString()),
+                                productDescription.getText().toString());
+                        this.dismiss();
+                    }
                 break;
             case R.id.cancel:
+                this.dismiss();
                 break;
         }
     }

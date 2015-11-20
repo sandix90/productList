@@ -11,17 +11,20 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/product_name"
             android:text="Тестовый продукт Тестовый продукт Тестовый продукт Тестовый продукт "
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:maxHeight="100dp"
             android:layout_weight="3" />
         <TextView
+            android:id="@+id/product_summ"
             android:text="20000.50"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
         <CheckBox
+            android:id="@+id/product_status"
             style="@android:style/Widget.Material.CompoundButton.CheckBox"
             android:layout_width="40dp"
             android:layout_height="40dp" />

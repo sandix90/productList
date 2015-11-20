@@ -3,20 +3,10 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <android.support.v7.widget.Toolbar
 
-        android:layout_width="match_parent"
-        android:layout_height="20dp">
-        <TextView
-
-            android:layout_marginLeft="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Добавление продукта"/>
-
-    </android.support.v7.widget.Toolbar>
 
     <android.support.design.widget.TextInputLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -26,6 +16,8 @@
         android:textSize="30dp"
         android:textColor="@color/black"
         android:layout_margin="5dp"
+        android:textCursorDrawable="@drawable/black_cursor"
+
         android:id="@+id/product_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,6 +38,7 @@
         android:layout_width="0dp"
         android:layout_weight="4">
         <EditText
+            android:id="@+id/product_price"
             android:background="@android:drawable/editbox_background_normal"
             android:textColor="#000000"
             android:textColorHint="#000000"
@@ -62,6 +55,7 @@
         android:layout_weight="3"
         >
         <EditText
+            android:id="@+id/product_quantity"
             android:background="@android:drawable/editbox_background_normal"
             android:textColor="#000000"
             android:textColorHint="#000000"
@@ -98,6 +92,7 @@
             android:layout_height="wrap_content"
             android:text="Описание"/>
         <EditText
+            android:id="@+id/description"
             android:background="@android:drawable/editbox_background_normal"
             android:layout_width="0dp"
             android:textColor="@color/black"
@@ -114,12 +109,12 @@
         <Button
             android:id="@+id/ok"
             android:text="OK"
-            android:background="@drawable/button_selector"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
             android:id="@+id/cancel"
-            android:text="Cancel"
+            android:text="CANCEL"
+            android:textColor="@drawable/button_pressed"
             android:layout_width="wrap_content"
             android:background="@drawable/button_selector"
             android:layout_height="wrap_content" />

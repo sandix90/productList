@@ -13,6 +13,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import java.util.zip.Inflater;
+
 public class ProductsListActivity extends AppCompatActivity implements View.OnClickListener, ProductDialog.OnDialogResultListener {
     FloatingActionButton fab;
     LinearLayout main_root;
@@ -73,8 +75,10 @@ public class ProductsListActivity extends AppCompatActivity implements View.OnCl
 
 
     @Override
-    public void onPositiveResult(String value) {
-        Toast.makeText(ProductsListActivity.this, value, Toast.LENGTH_SHORT).show();
+    public void onPositiveResult(String productName, float productPrice, float productQuantity, String productDescription) {
+        Toast.makeText(ProductsListActivity.this, productName, Toast.LENGTH_SHORT).show();
+        View product_item = getLayoutInflater().inflate(R.layout.product_item,main_root,true);
+
     }
 
     @Override
