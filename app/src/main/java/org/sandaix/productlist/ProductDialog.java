@@ -105,13 +105,19 @@ public class ProductDialog extends DialogFragment implements  View.OnClickListen
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.ok:
-                    if(productName.getText().toString().equals("")) {
+                    if(!productName.getText().toString().equals("") &&
+                    !productPrice.getText().toString().equals("") &&
+                    !productQuantity.getText().toString().equals("")) {
                         callback.onPositiveResult(productName.getText().toString(),
                                 Float.parseFloat(productPrice.getText().toString()),
                                 Float.parseFloat(productQuantity.getText().toString()),
                                 productDescription.getText().toString());
                         this.dismiss();
                     }
+                    else{
+                        Toast.makeText(getActivity(),"Some fields are empty",Toast.LENGTH_SHORT).show();
+                    }
+
                 break;
             case R.id.cancel:
                 this.dismiss();

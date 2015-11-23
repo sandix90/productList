@@ -35,7 +35,7 @@ public class DbHelper extends SQLiteOpenHelper {
         String  checkProductsQuery = "CREATE TABLE checkProduct (" +
                 "id integer primary key autoincrement," +
                 "checkList_id integer REFERENCES checkList(id) ," +
-                "product_id integer REFERENCES products(id)," +
+                "product_name nvarchar(100)," +
                 "status integer," +
                 "price real," +
                 "count real," +

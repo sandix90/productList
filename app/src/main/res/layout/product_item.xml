@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    android:layout_height="wrap_content"
+
     android:orientation="vertical">
 
     <LinearLayout
@@ -12,10 +12,10 @@
 
         <TextView
             android:id="@+id/product_name"
-            android:text="Тестовый продукт Тестовый продукт Тестовый продукт Тестовый продукт "
+            android:text="Тестовый продукт  "
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:maxHeight="100dp"
+
             android:layout_weight="3" />
         <TextView
             android:id="@+id/product_summ"
@@ -25,7 +25,7 @@
             android:layout_weight="1"/>
         <CheckBox
             android:id="@+id/product_status"
-            style="@android:style/Widget.Material.CompoundButton.CheckBox"
+            style="@android:style/Widget.DeviceDefault.CompoundButton.CheckBox"
             android:layout_width="40dp"
             android:layout_height="40dp" />
     </LinearLayout>

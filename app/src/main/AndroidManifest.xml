@@ -20,6 +20,9 @@
         <activity
             android:name=".ProductsListActivity"
             android:label="@string/title_activity_products_list" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
         </activity>
         <activity
             android:name=".addNewProduct"
